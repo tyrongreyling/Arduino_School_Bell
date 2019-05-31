@@ -22,7 +22,7 @@ void loop()
 		case 3:
 		case 6:
 		case 8:
-			luiKlok();
+			luiKlok();//Begin van dag
 			delay(600000);//Voogklas- 10 minute
 			luiKlok(); // Periode 1
 			
@@ -39,6 +39,7 @@ void loop()
 			break;
 		default: //Opsioneel
 			//Stellings
+			//Flits n LED/beep n buzzer om te wys daar is n probleem?
 	}
 	if (dag == 10)
 		dag = 0; // Begin weer by dag 1
