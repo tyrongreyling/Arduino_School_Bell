@@ -1,0 +1,45 @@
+int solenoidPin = 9;
+int day = 0;
+
+void setup()
+{
+	pinMode(solenoidPin, OUTPUT);
+}
+
+void luiKolk()
+{
+	digitalWrite(solenoidPin, HIGH);//Klok begin lui
+	delay(3000); //Lui vir 3 sekondes
+	digitalWrite(solenoidPin, LOW);//Klok hou op lui
+}
+
+void loop()
+{
+	++day;			//Volgende dag
+	switch(day)
+	{
+		case 1:
+		case 3:
+		case 6:
+		case 8:
+			luiKlok();
+			delay(600000);//Voogklas- 10 minute
+			luiKlok(); // Periode 1
+			
+			break;
+		case 2:
+		case 4:
+		case 7:
+		case 9:
+
+			break;
+		case 5:
+		case 10:
+
+			break;
+		default: //Opsioneel
+			//Stellings
+	}
+	if (dag == 10)
+		dag = 0; // Begin weer by dag 1
+}
